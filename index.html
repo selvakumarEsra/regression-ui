@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/img/favicon.png" izes="16x16">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="./script.js"></script>
   </head>
   <body ng-app="instantSearch" ng-controller="InstantSearchController">
@@ -31,8 +33,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="container">
 
       <div class="page-header" id="banner">
@@ -50,22 +50,157 @@
           </div> -->
         </div>
          <div class="row">
-          <div class="col-lg-12">
-          <div class="page-header">
-              <h1 id="tables">Tables</h1>
-            
-          <div class="bs-component">
+		 
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading centre">Components under Test
+						</div>
+						<div class="panel-body">
+							<table class="table table-striped table-hover table-responsive">
+								<tr>
+									<td>Components</td>
+									<td>AB</td>
+								</tr>
+								<tr>
+									<td>Production Version</td>
+									<td>P78787</td>
+								</tr>
+								<tr>
+									<td>Release Version</td>
+									<td>R09009</td>
+								</tr>
+								<tr>
+									<td>Registry, Library changes</td>
+									<td>xxxxxx, yyyyyy</td>
+								</tr>
+						
+							</table>
+						</div>
+					</div>			
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-info">
+						<div class="panel-heading center">Upstream Components</div>
+						<div class="panel-body">
+							<table class="table table-striped table-hover table-responsive">
+								<tr>
+									<td>Components</td>
+									<td>AB</td>
+								</tr>
+								<tr>
+									<td>Production Version</td>
+									<td>P78787</td>
+								</tr>
+								<tr>
+									<td>Release Version</td>
+									<td>R09009</td>
+								</tr>
+								<tr>
+									<td>Registry, Library changes</td>
+									<td>xxxxxx, yyyyyy</td>
+								</tr>
 
-          <table class="table table-striped table-hover">
-              <tr ng-repeat="i in items | searchFor">
-                
-                <td><p>{{i.title}}</p></td>
-              </tr>
-          </table>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading center">Downstream Components</div>
+						<div class="panel-body">
+							<table class="table table-striped table-hover table-responsive">
+								<tr>
+									<td>Components</td>
+									<td>AB</td>
+								</tr>
+								<tr>
+									<td>Production Version</td>
+									<td>P78787</td>
+								</tr>
+								<tr>
+									<td>Release Version</td>
+									<td>R09009</td>
+								</tr>
+								<tr>
+									<td>Registry, Library changes</td>
+									<td>xxxxxx, yyyyyy</td>
+								</tr>
+								
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+			<div class="container">
+				<h2>Iteration Compare results</h2>
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#home">Iteration I</a></li>
+						<li><a data-toggle="tab" href="#menu1">Iteration II</a></li>
+						<li><a data-toggle="tab" href="#menu2">Iteration III</a></li>
+						<li><a data-toggle="tab" href="#menu3">Iteration IV</a></li>
+					</ul>
 
-          </div>    
-          </div>
-          </div>
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+					<div class="bar">
+			<!-- Create a binding between the searchString model and the text field -->
+					<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+				</div>
+					 <div class="bs-component">
+					<table class="table table-bordered">
+						<tr ng-repeat="i in items | searchFor">
+							<td><p>{{i.title}}</p></td>
+						</tr>
+					</table>
+				</div>
+					</div>
+					<div id="menu1" class="tab-pane fade">
+					<div class="bar">
+			<!-- Create a binding between the searchString model and the text field -->
+					<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+				</div>
+					  <div class="bs-component">
+					<table class="table table-bordered">
+						<tr ng-repeat="i in items | searchFor">
+							<td><p>{{i.title}}</p></td>
+						</tr>
+					</table>
+				</div>
+					</div>
+					<div id="menu2" class="tab-pane fade">
+					<div class="bar">
+			<!-- Create a binding between the searchString model and the text field -->
+					<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+				</div>
+					  <div class="bs-component">
+					<table class="table table-bordered">
+						<tr ng-repeat="i in items | searchFor">
+							<td><p>{{i.title}}</p></td>
+						</tr>
+					</table>
+				</div>
+					</div>
+					<div id="menu3" class="tab-pane fade">
+					<div class="bar">
+			<!-- Create a binding between the searchString model and the text field -->
+					<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+				</div>
+					  <div class="bs-component">
+					<table class="table table-bordered">
+						<tr ng-repeat="i in items | searchFor">
+							<td><p>{{i.title}}</p></td>
+						</tr>
+					</table>
+				</div>
+					</div>
+				</div>
+			</div>
+			
+				
+				
+			</div>	
       </div>
 
 
@@ -78,7 +213,7 @@
 
 
     </div>
-
+	</div>
     
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
