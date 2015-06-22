@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html ng-app="App">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Regression Pack</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" media="screen">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css"
+          media="screen">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app/css/bootswatch.min.css">
+    <link rel="stylesheet" href="app/css/ngDialog.css">
     <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="app/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="app/css/ngDialog-theme-plain.css">
+    <link rel="stylesheet" href="app/css/ngDialog-custom-width.css">
     <link rel="icon" href="assets/img/favicon.png" sizes="16x16">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
 
     <script src="app/app.js"></script>
-    <script src="app/controllers/DashBoardController.js"></script>
-    <script src="app/controllers/LibrariesController.js"></script>
-  </head>
-  <body ng-controller="DashBoardController">
+    <script src="app/ngDialog.js"></script>
+    <script src="app/controllers/maincontroller.js"></script>
+    <script src="app/controllers/dashboardcontroller.js"></script>
+    <script src="app/controllers/librariescontroller.js"></script>
+</head>
+<body ng-controller="MainController">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container">
-		  <div class="navbar-header">
-			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				  <span class="sr-only">Toggle navigation</span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Regression Pack</a>
-		  </div>
-		  <div id="navbar-main" class="collapse navbar-collapse">
-			  <ul class="nav navbar-nav">
-				  <li ng-click="onClickTab('dashboard.html')" ng-class="{active: isActive('dashboard.html') }">
-                      <a href="#">DashBoard</a>
-                  </li>
-                  <li ng-click="onClickTab('libraries.html')" ng-class="{active: isActive('libraries.html') }">
-                      <a href="#">Libraries</a>
-                  </li>
-			  </ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Regression Pack</a>
+        </div>
+        <div id="navbar-main" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-click="onClickTab('dashboard.html')" ng-class="{active: isActive('dashboard.html') }">
+                    <a href="#">DashBoard</a>
+                </li>
+                <li ng-click="onClickTab('libraries.html')" ng-class="{active: isActive('libraries.html') }">
+                    <a href="#">Libraries</a>
+                </li>
+            </ul>
 
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#" target="_blank">Help</a></li>
-                  <li><a href="#" target="_blank">About</a></li>
-              </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ng-click="aboutDialog()" target="_blank">About</a></li>
+                <li><a href="#" target="_blank">Help</a></li>
+            </ul>
 
-          </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse -->
 
-	  </div>
-  </nav>
+    </div>
+</nav>
 
 <div ng-include="currentTab" class="content container"></div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  </body>
+</body>
 </html>

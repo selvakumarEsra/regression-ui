@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+
+      "results":[
+        { "name" : "commons-io","release":"2.11","production":"2.10","status":"same"},
+        { "name" : "commons-lang","release":"2.01","production":"2.00","status":"same"},
+        { "name" : "junit","release":"2.11","production":"2.10","status":"upgraded"},
+        { "name" : "jce","release":"2.11","production":"2.10","status":"downgraded"},
+        { "name" : "guava","release":"2.11","production":"2.10","status":"added"},
+        { "name" : "jfr","release":"2.11","production":"2.10","status":"deleted"}
+      ]
+  },
+
+  "statistics":{
+      "total":"6",
+      "nochange":"2",
+      "added":"1",
+      "modified":"2",
+      "deleted":"1"
+  }
+}
