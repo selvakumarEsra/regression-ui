@@ -1,0 +1,21 @@
+{
+  "registries": {
+
+      "results":[
+        { "name" : "DS_RELATIONAL_TOGGLE","current":"false","latest":"true","status":"changed"},
+        { "name" : "JVM_ARGS","current":"-Xms=1024m","latest":"Xms=1024m","status":"same"},
+        { "name" : "DB_SCHEMA","current":"ODS_DBO","latest":"","status":"added"},
+        { "name" : "DB.PARAMS","current":"2.11","latest":"2.10","status":"changed"},
+        { "name" : "JMS.CACHE.SIZE","current":"2","latest":"","status":"added"},
+        { "name" : "JMS.URL","current":"vm://localhost","latest":"","status":"deleted"}
+      ]
+  },
+
+  "statistics":{
+      "total":"6",
+      "changed":"2",
+      "added":"2",
+      "same":"1",
+      "deleted":"1"
+  }
+}

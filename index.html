@@ -22,6 +22,8 @@
     <script src="app/controllers/maincontroller.js"></script>
     <script src="app/controllers/dashboardcontroller.js"></script>
     <script src="app/controllers/librariescontroller.js"></script>
+    <script src="app/controllers/registriescontroller.js"></script>
+
 </head>
 <body ng-controller="MainController">
 
@@ -44,6 +46,9 @@
                 </li>
                 <li ng-click="onClickTab('libraries.html')" ng-class="{active: isActive('libraries.html') }">
                     <a href="#">Libraries</a>
+                </li>
+                <li ng-click="onClickTab('registries.html')" ng-class="{active: isActive('registries.html') }">
+                    <a href="#">Registries</a>
                 </li>
             </ul>
 
