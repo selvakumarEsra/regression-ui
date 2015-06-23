@@ -2,7 +2,7 @@ App.controller('RegistriesController',function($scope,$http,$location){
 
     $scope.sortType     = 'status';
     $scope.sortReverse  = false;
-    $scope.searchLibrary   = '';
+    $scope.searchRegistry   = '';
 
     $scope.onClickTab = function (tab) {
         $scope.currentTab = tab;
@@ -13,7 +13,12 @@ App.controller('RegistriesController',function($scope,$http,$location){
     }
 
 
-        $http.get('registries.json').then(function(res){
+    $scope.onClickBadge = function (registry) {
+        $scope.searchRegistry = registry;
+    }
+
+
+    $http.get('registries.json').then(function(res){
         $scope.registries = res.data.registries;
         $scope.results = $scope.registries.results;
         $scope.statistics = res.data.statistics;

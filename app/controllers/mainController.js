@@ -13,7 +13,8 @@ App.controller('MainController',function($scope,$http,$location,ngDialog){
     $scope.aboutDialog = function () {
         var dialog = ngDialog.open({
             template:
-            '<p><p>Regression pack for SCPP Team</p></p>' +
+            '<img src="assets/img/favicon.png" class="img-circle" alt="Cinque Terre" width="200" height="200"><p>' +
+            'Regression pack for SCPP Team</p>' +
             '<div class="ngdialog-buttons"></div>',
             plain: true
         });

@@ -11,15 +11,18 @@
         </div>
 
         <ul class="nav nav-pills">
-            <li><a href="#">Total <span class="badge">{{statistics.total}}</span></a></li>
-            <li><a href="#">No Change <span class="badge">{{statistics.nochange}}</span></a></li>
-            <li><a href="#">Added <span class="badge">{{statistics.added}}</span></a></li>
-            <li><a href="#">Modified <span class="badge">{{statistics.modified}}</span></a></li>
-            <li><a href="#">Deleted <span class="badge">{{statistics.deleted}}</span></a></li>
+            <li><a href="#">Total <span ng-click="onClickBadge('')" class="badge">{{statistics.total}}</span></a></li>
+            <li><a href="#">No Change <span ng-click="onClickBadge('same')" class="badge">{{statistics.nochange}}</span></a></li>
+            <li><a href="#">Added <span ng-click="onClickBadge('added')" class="badge">{{statistics.added}}</span></a></li>
+            <li><a href="#">Downgraded <span ng-click="onClickBadge('downgraded')" class="badge">{{statistics.downgraded}}</span></a></li>
+            <li><a href="#">Upgraded <span ng-click="onClickBadge('upgraded')" class="badge">{{statistics.upgraded}}</span></a></li>
+            <li><a href="#">Deleted <span ng-click="onClickBadge('deleted')" class="badge">{{statistics.deleted}}</span></a></li>
         </ul>
 
+        <ul>
+            <div class="row" style="height: 20px"></div>
+        </ul>
 
-        <div class="row" style="height: 20px"></div>
 
         <ul>
             <form>

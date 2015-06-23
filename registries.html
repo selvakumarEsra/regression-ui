@@ -11,11 +11,11 @@
         </div>
 
         <ul class="nav nav-pills">
-            <li><a href="#">Total <span class="badge">{{statistics.total}}</span></a></li>
-            <li><a href="#">No Change <span class="badge">{{statistics.same}}</span></a></li>
-            <li><a href="#">Added <span class="badge">{{statistics.added}}</span></a></li>
-            <li><a href="#">Modified <span class="badge">{{statistics.changed}}</span></a></li>
-            <li><a href="#">Deleted <span class="badge">{{statistics.deleted}}</span></a></li>
+            <li><a href="#">Total <span ng-click="onClickBadge('')" class="badge">{{statistics.total}}</span></a></li>
+            <li><a href="#">No Change <span ng-click="onClickBadge('same')" class="badge">{{statistics.same}}</span></a></li>
+            <li><a href="#">Added <span ng-click="onClickBadge('added')" class="badge">{{statistics.added}}</span></a></li>
+            <li><a href="#">Modified <span ng-click="onClickBadge('changed')" class="badge">{{statistics.changed}}</span></a></li>
+            <li><a href="#">Deleted <span ng-click="onClickBadge('deleted')" class="badge">{{statistics.deleted}}</span></a></li>
         </ul>
 
 

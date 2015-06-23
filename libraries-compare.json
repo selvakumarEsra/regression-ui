@@ -15,7 +15,8 @@
       "total":"6",
       "nochange":"2",
       "added":"1",
-      "modified":"2",
+      "downgraded":"1",
+      "upgraded":"1",
       "deleted":"1"
   }
 }

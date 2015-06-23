@@ -8,6 +8,12 @@ App.controller('LibrariesController',function($scope,$http,$location){
         $scope.currentTab = tab;
     }
 
+
+    $scope.onClickBadge = function (library) {
+        $scope.searchLibrary = library;
+    }
+
+
     $scope.isActive = function(currentView){
         return (currentView == $scope.currentTab);
     }
