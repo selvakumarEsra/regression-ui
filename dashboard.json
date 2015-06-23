@@ -1,0 +1,17 @@
+{
+  "componentsummary": {
+
+      "componentundertest":[
+        { "name" : "Determine Settlement","production":"2015.90.87.3.2","release":"2015.06.87.7.2","registry":"yes","library":"yes"}
+      ],
+
+    "upstream":[
+      { "name" : "VETS","production":"2015.01.7.13.2","release":"2015.02.8.7.2","registry":"yes","library":"yes"}
+    ],
+
+    "upstream":[
+      { "name" : "Position Service","production":"2015.01.7.13.2","release":"2015.02.8.7.2","registry":"yes","library":"yes"}
+    ]
+  }
+
+}
